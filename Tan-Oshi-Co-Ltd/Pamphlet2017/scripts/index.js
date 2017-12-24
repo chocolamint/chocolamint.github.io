@@ -8,7 +8,7 @@
     $window.on('scroll', function () {
 
         var scrollTop = $window.scrollTop();
-        var innerHeight = $window.innerHeight();
+        var innerHeight = window.innerHeight;
         var percent = scrollTop / innerHeight;
 
         //console.log(percent);
@@ -38,6 +38,7 @@
         //lastScrollTop = scrollTop;
 
         $('h1,.summary,.schedule').css('height', `${innerHeight}px`);
+        $('#foo').text(innerHeight.toString());
     });
     //$window.on('touchend', function () {
 
