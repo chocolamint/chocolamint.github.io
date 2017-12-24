@@ -52,7 +52,7 @@ h1 {
     position: relative;
     z-index: 1;
     background: url("../images/bg2.jpg") center top no-repeat fixed;
-    background-size: contain;
+    background-size: cover;
     height: 100vh;
 }
 
