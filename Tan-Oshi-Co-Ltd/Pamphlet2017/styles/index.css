@@ -51,7 +51,7 @@ h1 {
 
     .summary:before {
         content: "";
-        background: rgba(255, 255, 255, 0.3);
+        /*background: rgba(255, 255, 255, 0.3);*/
         position: absolute;
         top: 0;
         right: 0;
