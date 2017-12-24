@@ -5,6 +5,13 @@
     font-family: serif;
 }
 
+#bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
 h1 {
     margin: auto;
     padding: 0;
