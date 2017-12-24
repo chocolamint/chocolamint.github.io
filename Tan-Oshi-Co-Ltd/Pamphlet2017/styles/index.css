@@ -166,3 +166,7 @@ h1 {
         width: 2vw;
         border-radius: 1vw;
     }
+
+    .schedule dd:last-of-type:before {
+        content: none;
+    }
