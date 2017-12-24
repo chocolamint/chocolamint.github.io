@@ -16,4 +16,7 @@
     });
     $window.trigger('scroll');
 
+    setInterval(function () {
+        $('#bar').text(window.innerHeight);
+    }, 15);
 });
