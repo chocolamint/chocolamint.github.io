@@ -39,28 +39,28 @@
 
         $('h1,.summary,.schedule').css('height', `${innerHeight}px`);
     });
-    $window.on('touchend', function () {
+    //$window.on('touchend', function () {
 
-        var scrollTop = $window.scrollTop();
-        var innerHeight = $window.innerHeight();
-        var percent = scrollTop / innerHeight;
+    //    var scrollTop = $window.scrollTop();
+    //    var innerHeight = $window.innerHeight();
+    //    var percent = scrollTop / innerHeight;
 
-        if (percent < 0.5) {
-            $('body').animate({ scrollTop: 0 }, 200);
-        }
-        if (0.5 <= percent && percent < 1.0) {
-            $('body').animate({ scrollTop: innerHeight }, 200);
-            //$window.scrollTop(innerHeight);
-        }
-        if (1.0 < percent && percent < 1.5) {
-            $('body').animate({ scrollTop: innerHeight }, 200);
-            //$window.scrollTop(innerHeight);
-        }
-        if (1.5 <= percent && percent < 2.0) {
-            $('body').animate({ scrollTop: innerHeight * 2 }, 200);
-            //$window.scrollTop(innerHeight * 2);
-        }
-    });
+    //    if (percent < 0.5) {
+    //        $('body').animate({ scrollTop: 0 }, 200);
+    //    }
+    //    if (0.5 <= percent && percent < 1.0) {
+    //        $('body').animate({ scrollTop: innerHeight }, 200);
+    //        //$window.scrollTop(innerHeight);
+    //    }
+    //    if (1.0 < percent && percent < 1.5) {
+    //        $('body').animate({ scrollTop: innerHeight }, 200);
+    //        //$window.scrollTop(innerHeight);
+    //    }
+    //    if (1.5 <= percent && percent < 2.0) {
+    //        $('body').animate({ scrollTop: innerHeight * 2 }, 200);
+    //        //$window.scrollTop(innerHeight * 2);
+    //    }
+    //});
     $window.trigger('scroll');
 
 });
