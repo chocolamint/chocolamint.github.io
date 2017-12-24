@@ -1,4 +1,4 @@
-jQuery(function ($) {
+﻿jQuery(function ($) {
     'use strict';
 
     var $h1 = $('h1');

@@ -1,4 +1,4 @@
-html, body {
+ï»¿html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -27,7 +27,7 @@ h1 {
     }
 
     h1:after {
-        content: "Š”®‰ïĞ’P„‚µ\A 2017”N“xĞˆõ—·s\A —·‚Ì‚µ‚¨‚è";
+        content: "æ ªå¼ä¼šç¤¾å˜æ¨ã—\A 2017å¹´åº¦ç¤¾å“¡æ—…è¡Œ\A æ—…ã®ã—ãŠã‚Š";
         color: black;
         white-space: pre;
         position: fixed;
