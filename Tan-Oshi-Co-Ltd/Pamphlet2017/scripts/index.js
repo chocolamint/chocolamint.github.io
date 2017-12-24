@@ -11,7 +11,7 @@
 
         $h1.css({
             'opacity': Math.max(1 - percent, 0),
-            'font-size': `${Math.min(140 / Math.max(1 - percent, 0), 300)}%`
+            //'font-size': `${Math.min(140 / Math.max(1 - percent, 0), 300)}%`
         });
     });
     $window.trigger('scroll');
