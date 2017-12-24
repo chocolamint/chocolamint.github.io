@@ -6,7 +6,7 @@
     var initialHeight = window.innerHeight;
     $window.on('scroll', function () {
 
-        var scrollTop = $window.scrollTop() + (window.innerHeight - initialHeight);
+        var scrollTop = $window.scrollTop()/* + (window.innerHeight - initialHeight)*/;
         var innerHeight = window.innerHeight;
         var percent = scrollTop / innerHeight;
 
@@ -17,16 +17,16 @@
     });
     $window.trigger('scroll');
 
-    setInterval(function () {
-        $('#bar').text(window.innerHeight);
-        var scrollTop = window.innerHeight - initialHeight;
-        if (scrollTop == 0) return;
-        var innerHeight = window.innerHeight;
-        var percent = scrollTop / innerHeight;
-        $('h1').css({
-            'height': `${window.innerHeight}px`,
-            'opacity': 1 - percent
-        });
+    //setInterval(function () {
+    //    $('#bar').text(window.innerHeight);
+    //    var scrollTop = window.innerHeight - initialHeight;
+    //    if (scrollTop == 0) return;
+    //    var innerHeight = window.innerHeight;
+    //    var percent = scrollTop / innerHeight;
+    //    $('h1').css({
+    //        'height': `${window.innerHeight}px`,
+    //        'opacity': 1 - percent
+    //    });
 
-    }, 15);
+    //}, 15);
 });
