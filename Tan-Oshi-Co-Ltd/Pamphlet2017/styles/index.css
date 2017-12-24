@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: serif;
+}
+
+h1 {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    font-size: 140%;
+}
+
+    h1:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("../images/bg.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    h1:after {
+        content: "株式会社単推し\A 2017年度社員旅行\A 旅のしおり";
+        color: black;
+        white-space: pre;
+        position: fixed;
+        top: 35%;
+        right: -100vw;
+        left: -100vw;
+        text-align: right;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10vw 105vw;
+        direction: rtl;
+    }
+
+.summary {
+    background: white;
+    position: relative;
+    z-index: 1;
+    background: url("../images/bg2.jpg") center center no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+    .summary:before {
+        content: "";
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .summary > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .summary h2 {
+        margin: 0;
+        padding: 12vw 4vw 2vw;
+        font-size: 120%;
+        border-left: 1vw black solid;
+        border-bottom: 1px black solid;
+    }
+
+    .summary .summary-content {
+        padding-left: 5vw;
+        padding-right: 4vw;
+    }
+
+        .summary .summary-content > * {
+            margin: 0;
+        }
+
+        .summary .summary-content h3 {
+            padding-top: 4vw;
+            padding-right: 2vw;
+            padding-bottom: 0;
+            font-size: 100%;
+            font-weight: bold;
+            border-bottom: 1px rgba(0, 0, 0, 0.6) solid;
+            display: inline-block;
+        }
+
+            .summary .summary-content h3 + * {
+                margin-top: 2vw;
+            }
+
+
+        .summary .summary-content p + p {
+            margin-top: 2vw;
+        }
+
+.schedule {
+    background: white;
+    position: relative;
+    z-index: 1;
+    background: url("../images/bg3.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+    .schedule:before {
+        content: "";
+        background: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .schedule > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .schedule h2 {
+        margin: 0;
+        padding: 12vw 4vw 2vw;
+        font-size: 120%;
+        border-left: 1vw black solid;
+        border-bottom: 1px black solid;
+    }
+
+    .schedule dl {
+        line-height: 1em;
+    }
+
+    .schedule dt {
+        margin: 0 0 0 6vw;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: hsl(320, 60%, 30%);
+        text-align: center;
+        display: inline-block;
+        width: 3.3em;
+    }
+
+    .schedule dd {
+        position: relative;
+        padding: 0 2vw 1.5em 2em;
+        margin: -1em 0 0 3em;
+        height: 3em;
+    }
+
+    .schedule dd:before {
+        content: "";
+        background: hsl(320, 60%, 30%);
+        display: block;
+        position: absolute;
+        top: 1.2em;
+        left: 0;
+        bottom: 2vw;
+        width: 2vw;
+        border-radius: 1vw;
+    }
