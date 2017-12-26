@@ -87,9 +87,8 @@ h1 {
 
 .slogan {
     position: absolute;
-    text-align: center;
     bottom: 45vh;
-    left: 5vw;
+    left: 12vw;
     right: 0;
     font-family: azuki;
     font-size: 3.5vw;
@@ -100,14 +99,14 @@ h1 {
 
     .slogan::before {
         top: -2.8vw;
-        left: 6.8vw;
-        transform: rotate(-10deg);
+        left: -0.7vw;
+        transform: rotate(-18deg);
     }
 
     .slogan::after {
-        top: -2vw;
-        left: 5.5vw;
-        transform: rotate(-34deg);
+        top: -1.6vw;
+        left: -2vw;
+        transform: rotate(-52deg);
     }
 
     .slogan::before, .slogan::after {
