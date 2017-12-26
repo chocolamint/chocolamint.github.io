@@ -1,6 +1,10 @@
 ﻿jQuery(function ($) {
     'use strict';
 
+    $.scrollify({
+        section: ".page",
+    });
+
     var $h1 = $('h1');
     var $window = $(window);
     var initialHeight = window.innerHeight;
