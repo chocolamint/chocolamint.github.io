@@ -48,24 +48,34 @@ header {
         width: 5vw;
     }
 
-/* 流石にページ全体を飾ろうと思うと画像じゃないと無理ぽ */
-/*header::after {
-        content: "鉛";
-        font-family: mini-convenie;
+    header::after {
+        content: "株単社員旅行2017";
+        font-family: azuki;
+        font-weight: bold;
         position: absolute;
-        top: 6vw;
-        left: 8vw;
-        font-size: 12vw;
-    }*/
+        top: 12vw;
+        right: 7vw;
+        font-size: 4.5vw;
+        /*color: white;*/
+        /*background: #680D0D;*/
+        /*padding: 4vw;*/
+        /*border-radius: 50vw / 18vw;*/
+        border-radius: 2vw;
+        border: double 3px #FF9D41;
+        color: #FF9D41;
+        padding: 2vw 4vw;
+        transform: rotate(15deg);
+    }
 
 h1 {
-    font-size: 0;
+    /*font-size: 0;*/
     position: absolute;
     font-family: "mini-convenie";
     text-align: center;
     bottom: 52vh;
     left: 3vw;
     right: 0;
+    font-size: 0;
 }
 
     h1::before {
@@ -127,6 +137,16 @@ h1 {
     border-bottom: double 1px #909090;
     box-shadow: 0 2px 0 white, 0 3px 0 #909090;
 }
+    /*.your-name::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5vw;
+        border-color: #680D0D transparent transparent transparent;
+        position: absolute;
+        top: -5vw;
+    }*/
 
     .your-name label {
         font-family: RiiMonakaBLt;
