@@ -1,10 +1,151 @@
-﻿html, body {
+﻿@font-face {
+    font-family: 'RiiMonakaBLt';
+    src: url('../fonts/RiiMonakaBLt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RiiMonakaBRt';
+    src: url('../fonts/RiiMonakaBRt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RiiMonakaWLt';
+    src: url('../fonts/RiiMonakaWLt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RiiMonakaWRt';
+    src: url('../fonts/RiiMonakaWRt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'mini-convenie';
+    src: url('../fonts/mini-convenie.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'azuki';
+    src: url('../fonts/azuki.ttf') format('truetype');
+}
+
+html, body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: serif;
 }
 
+header {
+    position: relative;
+}
+
+    header::before {
+        content: "";
+        background: repeating-linear-gradient(-20deg, #BE0000, #BE0000 10vw, #D8ACFF 0, #D8ACFF 20vw, #77FF59 0, #77FF59 30vw, #FF7AB1 0, #FF7AB1 40vw, #FF9D41 0, #FF9D41 50vw, #62DDFF 0, #62DDFF 60vw, #AFAFAF 0, #AFAFAF 70vw, #0004E1 0, #0004E1 80vw, #F6F21A 0, #F6F21A 90vw);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 5vw;
+    }
+
+/* 流石にページ全体を飾ろうと思うと画像じゃないと無理ぽ */
+/*header::after {
+        content: "鉛";
+        font-family: mini-convenie;
+        position: absolute;
+        top: 6vw;
+        left: 8vw;
+        font-size: 12vw;
+    }*/
+
+h1 {
+    font-size: 0;
+    position: absolute;
+    font-family: "mini-convenie";
+    text-align: center;
+    bottom: 52vh;
+    left: 3vw;
+    right: 0;
+}
+
+    h1::before {
+        content: "たび";
+        color: hsla(0, 100%, 100%, 0.5);
+        text-shadow: cornflowerblue 0.7vw 0.7vw 0, cornflowerblue 0.7vw 0.9vw 0, cornflowerblue 0.9vw 0.7vw 0;
+    }
+
+    h1::after {
+        content: "のしおり";
+        color: hsla(0, 100%, 100%, 0.5);
+        text-shadow: deeppink 0.7vw 0.7vw 0, deeppink 0.7vw 0.9vw 0, deeppink 0.9vw 0.7vw 0;
+        margin-left: 2vw;
+    }
+
+    h1::before, h1::after {
+        font-size: 10vw;
+    }
+
+.slogan {
+    position: absolute;
+    text-align: center;
+    bottom: 45vh;
+    left: 5vw;
+    right: 0;
+    font-family: azuki;
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: hsla(33, 100%, 65%, 0.64);
+    text-shadow: hsl(33, 68%, 46%) -0.4vw -0.3vw, hsl(33, 68%, 46%) -0.5vw -0.3vw;
+}
+
+    .slogan::before {
+        top: -2.8vw;
+        left: 6.8vw;
+        transform: rotate(-10deg);
+    }
+
+    .slogan::after {
+        top: -2vw;
+        left: 5.5vw;
+        transform: rotate(-34deg);
+    }
+
+    .slogan::before, .slogan::after {
+        content: "";
+        display: block;
+        width: 1vw;
+        height: 2vw;
+        background: #FFAF4D;
+        position: absolute;
+        border-radius: 0.5vw;
+    }
+
+.your-name {
+    position: absolute;
+    bottom: 3vh;
+    left: 14vw;
+    right: 5vw;
+    border-bottom: double 1px #909090;
+    box-shadow: 0 2px 0 white, 0 3px 0 #909090;
+}
+
+    .your-name label {
+        font-family: RiiMonakaBLt;
+    }
+
+    .your-name input[type="text"] {
+        border: none;
+        margin-left: 10vw;
+        font-size: 7vw;
+        position: absolute;
+        left: 8vw;
+        right: 5vw;
+        bottom: 1vw;
+        width: auto;
+        font-family: azuki;
+    }
+
+/*
 #bar {
     position: fixed;
     top: 0;
@@ -58,7 +199,6 @@ h1 {
 
     .summary:before {
         content: "";
-        /*background: rgba(255, 255, 255, 0.3);*/
         position: absolute;
         top: 0;
         right: 0;
@@ -177,3 +317,4 @@ h1 {
     .schedule dd:last-of-type:before {
         content: none;
     }
+*/
