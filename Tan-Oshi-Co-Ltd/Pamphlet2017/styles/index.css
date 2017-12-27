@@ -36,16 +36,11 @@ html, body {
 
 header {
     position: relative;
+    background: linear-gradient(90deg, transparent 0, transparent 5vw, white 5vw, white 100%), repeating-linear-gradient(-20deg, #BE0000, #BE0000 10vw, #D8ACFF 0, #D8ACFF 20vw, #77FF59 0, #77FF59 30vw, #FF7AB1 0, #FF7AB1 40vw, #FF9D41 0, #FF9D41 50vw, #62DDFF 0, #62DDFF 60vw, #AFAFAF 0, #AFAFAF 70vw, #0004E1 0, #0004E1 80vw, #F6F21A 0, #F6F21A 90vw);
 }
 
     header::before {
-        content: "";
-        background: repeating-linear-gradient(-20deg, #BE0000, #BE0000 10vw, #D8ACFF 0, #D8ACFF 20vw, #77FF59 0, #77FF59 30vw, #FF7AB1 0, #FF7AB1 40vw, #FF9D41 0, #FF9D41 50vw, #62DDFF 0, #62DDFF 60vw, #AFAFAF 0, #AFAFAF 70vw, #0004E1 0, #0004E1 80vw, #F6F21A 0, #F6F21A 90vw);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 5vw;
+        /* 自由に使うがよい！ */
     }
 
     header::after {
