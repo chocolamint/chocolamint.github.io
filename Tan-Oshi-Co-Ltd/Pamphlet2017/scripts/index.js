@@ -64,8 +64,8 @@
                     localStorage.setItem('memo-count', memoCount + 1);
                     const memoObj = {
                         memo: memo,
-                        pageX: e.changedTouches[0].pageX,
-                        pageY: e.changedTouches[0].pageY
+                        pageX: e.changedTouches[0].pageX - 20,
+                        pageY: e.changedTouches[0].pageY - 15
                     };
                     localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
                     $('<div>')
