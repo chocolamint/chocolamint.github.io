@@ -30,6 +30,71 @@
         $(this).prop('checked', v == 'true');
     });
 
+    let startTimestamp;
+    $('body').on('touchstart', function (e) {
+        startTimestamp = new Date().getTime();
+    });
+
+    $('body').on('touchend', function (e) {
+        const $target = $(e.target);
+        if ($target.is('input, label')) return;
+        if ($target.is('.memo')) {
+            if (confirm('はずす？')) {
+                localStorage.removeItem('memo' + $target.prop('memo-id'));
+                $target.remove();
+
+                if (!$('.memo').length) {
+                    localStorage.setItem('memo-count', 0);
+                }
+            }
+        } else {
+
+            const holdTime = new Date().getTime() - startTimestamp;
+            if (holdTime < 500) return;
+
+            let memo;
+            while (true) {
+                memo = prompt('付箋を貼る', memo);
+                if (memo) {
+                    if (memo.length > 14) {
+                        alert('メモが長すぎます！');
+                        continue;
+                    }
+                    const memoCount = Number(localStorage.getItem('memo-count'));
+                    localStorage.setItem('memo-count', memoCount + 1);
+                    const memoObj = {
+                        memo: memo,
+                        pageX: e.changedTouches[0].pageX,
+                        pageY: e.changedTouches[0].pageY
+                    };
+                    localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
+                    $('<div>')
+                        .addClass('memo')
+                        .prop('memo-id', memoCount)
+                        .css({ 'left': memoObj.pageX, 'top': memoObj.pageY })
+                        .text(memo)
+                        .appendTo('body');
+                }
+                break;
+            }
+        }
+    });
+
+    if (true) {
+        const memoCount = Number(localStorage.getItem('memo-count'));
+        for (let i = 0; i < memoCount || 0; i++) {
+            const memoObj = JSON.parse(localStorage.getItem('memo' + i));
+            if (memoObj) {
+                $('<div>')
+                    .addClass('memo')
+                    .prop('memo-id', i)
+                    .css({ 'left': memoObj.pageX, 'top': memoObj.pageY })
+                    .text(memoObj.memo)
+                    .appendTo('body');
+            }
+        }
+    }
+
     // $('.schedule dt').each(function () {
     //     const $dt = $(this);
     //     const hm = $dt.text().split(':');

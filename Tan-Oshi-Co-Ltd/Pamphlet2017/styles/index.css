@@ -538,8 +538,7 @@ h3:after {
 }
 
 .things li {
-    margin: 1vh 0;
-    padding: 0 0 0 3vh;
+    margin: 0;
     position: relative;
 }
 
@@ -547,6 +546,11 @@ h3:after {
     position: absolute;
     left: -100vw;
 }
+
+    .things input[type="checkbox"] + label {
+        display: block;
+        padding: 0.5vh 0 0.5vh 3vh;
+    }
 
     .things input[type="checkbox"] + label:before {
         content: "";
@@ -577,3 +581,14 @@ h3:after {
         margin: auto 0;
         transform: rotate(-45deg);
     }
+
+.memo {
+    position: absolute;
+    border-left: 4vw red solid;
+    background: white;
+    min-width: 4em;
+    font-size: 4vw;
+    padding: 1vw 4vw 1vw 2vw;
+    box-shadow: 1px 1px 2px gray;
+    white-space: nowrap;
+}
