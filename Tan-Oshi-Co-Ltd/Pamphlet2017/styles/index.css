@@ -251,6 +251,7 @@ ul li:before {
 }
 
 .schedule dl {
+    margin-top: -2vh;
     margin-left: 3vw;
     font-size: 4vw;
 }
@@ -346,38 +347,38 @@ ul li:before {
 .schedule dd:nth-of-type(5):before {
     font-family: 'KFhimajiILLUST';
     content: "滑";
-    font-size: 10vw;
+    font-size: 8vw;
     position: absolute;
-    top: 5vh;
-    left: 4vw;
+    top: 4vh;
+    left: 0;
     color: #1cacc5;
-    transform: rotate(-8deg);
+    transform: rotate(-9deg);
 }
 
 .schedule dd:nth-of-type(5):after {
     position: absolute;
     left: 2vw;
-    top: 8vh;
+    top: 6vh;
     content: "┷ スキー＆スノボ！ ┿";
     font-weight: bold;
-    font-size: 6vw;
-    transform: rotate(-15deg);
+    font-size: 5vw;
+    transform: rotate(-12deg);
     color: #cb1ed1;
 }
 
 .schedule dt:nth-of-type(6) {
-    margin-top: 16vh;
+    margin-top: 12vh;
 }
 .schedule dt:nth-of-type(6):before {
-    height: 16vh;
+    height: 12vh;
 }
 
 .schedule dd:nth-of-type(6):before {
     font-family: 'KFhimajiILLUST';
     content: "ゆ";
-    font-size: 12vw;
+    font-size: 10vw;
     position: absolute;
-    top: -9vh;
+    top: -7vh;
     left: 50vw;
     color: #1c79c5;
     transform: rotate(14deg);
