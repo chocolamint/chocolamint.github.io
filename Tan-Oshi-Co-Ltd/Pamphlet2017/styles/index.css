@@ -4,21 +4,6 @@
 }
 
 @font-face {
-    font-family: 'RiiMonakaBRt';
-    src: url('../fonts/RiiMonakaBRt.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'RiiMonakaWLt';
-    src: url('../fonts/RiiMonakaWLt.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'RiiMonakaWRt';
-    src: url('../fonts/RiiMonakaWRt.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'mini-convenie';
     src: url('../fonts/mini-convenie.otf') format('opentype');
 }
@@ -50,7 +35,7 @@ header {
     }
 
     header::after {
-        content: "株単社員旅行2017";
+        content: "株単社員旅行";
         font-weight: bold;
         position: absolute;
         top: 12vw;
@@ -219,7 +204,7 @@ h2 {
     margin: 1vh 0 1vh 0;
     display: inline-block;
     padding: 0 0.5vw 0 1vw;
-    border-bottom: 0.5vw solid orange;
+    border-bottom: 0.5vw solid #d48900d6;
     position: relative;
 }
 
@@ -229,15 +214,8 @@ h2 {
         left: 1.5vw;
         right: -1.5vw;
         bottom: -1.5vw;
-        border-bottom: 0.5vw solid orange;
+        border-bottom: 0.5vw solid #d48900d6;
     }
-
-h2 {
-    display: inline-block;
-    padding: 0 0.5vw 0 1vw;
-    border-bottom: 0.5vw solid orange;
-    position: relative;
-}
 
 h3:after {
     content: "┳";
@@ -247,22 +225,58 @@ h3:after {
 .summary {
 }
 
-    .summary .members ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    .summary h3 {
+        margin: 2vh 0 1.5vh;
     }
 
-        .summary .members ul li {
-            margin: 0.4em 0;
+    .summary p {
+        margin: 0;
+    }
+
+    .summary .summary-content:before {
+        font-family: KFhimajiILLUST;
+        content: "帳";
+        position: absolute;
+        font-size: 12vw;
+        left: 70vw;
+        top: 3.5vh;
+        transform: rotate(20deg);
+        color: #2e8bdc3a;
+        z-index: -1;
+    }
+
+    .summary .members {
+        position: relative;
+    }
+
+        .summary .members:after {
+            font-family: KFhimajiILLUST;
+            content: "道";
+            position: absolute;
+            font-size: 30vw;
+            left: 60vw;
+            top: 4vh;
+            transform: rotate(-20deg);
+            color: #8428284f;
+            z-index: -1;
+        }
+
+        .summary .members ul {
+            list-style: none;
+            margin: 0;
             padding: 0;
         }
 
-            .summary .members ul li:before {
-                content: "┨";
-                margin-right: 0.5em;
-                font-weight: bold;
+            .summary .members ul li {
+                margin: 0.4em 0;
+                padding: 0;
             }
+
+                .summary .members ul li:before {
+                    content: "┨";
+                    margin-right: 0.5em;
+                    font-weight: bold;
+                }
 
     .summary .attention {
         border: double 6px hsl(29, 100%, 50%);
@@ -307,7 +321,7 @@ h3:after {
 
 .schedule h2,
 .schedule h2:after {
-    border-bottom-color: #cb1ed1;
+    border-bottom-color: #d11e8db8;
 }
 
 .schedule dl {
@@ -419,9 +433,10 @@ h3:after {
 
 .schedule dd:nth-of-type(5):after {
     position: absolute;
-    left: 2vw;
+    left: 10vw;
     top: 6vh;
-    content: "┷ スキー＆スノボ！ ┿";
+    font-family: mini-convenie;
+    content: "スキー＆スノボ！";
     font-weight: bold;
     font-size: 5vw;
     transform: rotate(-12deg);
@@ -466,6 +481,16 @@ h3:after {
     font-size: 6vw;
 }
 
+.schedule dd:nth-of-type(8):after {
+    font-family: 'KFhimajiILLUST';
+    content: "話";
+    color: #0e962d47;
+    position: absolute;
+    font-size: 18vw;
+    top: 8vw;
+    left: 40vw;
+}
+
 .schedule dd:nth-of-type(9):after {
     font-family: 'KFhimajiILLUST';
     content: "湯";
@@ -499,6 +524,10 @@ h3:after {
 .schedule dd {
     margin-top: -1em;
     margin-left: 4em;
+}
+
+.things h2, .things h2:after {
+    border-bottom-color: #22ad0e99;
 }
 
 .things ul {

@@ -6,6 +6,7 @@
     });
 
     $('#your-name').on('focus', function (e) {
+        e.preventDefault();
         $(this).blur();
         setTimeout(() => {
             const inputName = prompt('おなまえは？', $(this).val());
