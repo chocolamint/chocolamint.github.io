@@ -5,6 +5,15 @@
         section: ".page",
     });
 
+    $('input[type="checkbox"]').on('change', function () {
+        localStorage.setItem($(this).attr('id'), $(this).prop('checked'));
+    });
+
+    $('input[type="checkbox"]').each(function () {
+        const v = localStorage.getItem($(this).attr('id'));
+        $(this).prop('checked', v == 'true');
+    });
+
     // $('.schedule dt').each(function () {
     //     const $dt = $(this);
     //     const hm = $dt.text().split(':');
