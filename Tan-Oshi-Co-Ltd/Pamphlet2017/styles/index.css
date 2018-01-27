@@ -162,97 +162,155 @@ h1 {
         width: auto;
     }
 
+.toc {
+    position: fixed;
+    top: 0;
+    right: 17vw;
+    bottom: 0;
+    width: 10vw;
+    z-index: 3;
+    background: pink;
+    display: none;
+}
+
+    .toc ol, .toc li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .toc li {
+        /* transform: rotate(90deg); */
+        list-style: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 8vh;
+    }
+
+        .toc li a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background: yellowgreen;
+        }
+
+        .toc li:nth-child(2) {
+            background: blue;
+            left: 8vh;
+            z-index: 5;
+        }
+
+        .toc li:nth-child(3) {
+            background: maroon;
+            top: 50%;
+        }
+
 .page:not(:first-child) {
     padding: 2vh 4vw;
     position: relative;
 }
 
-.page:not(:first-child) h2 {
+h2 {
+    margin: 1vh 0 1vh 0;
     display: inline-block;
     padding: 0 0.5vw 0 1vw;
     border-bottom: 0.5vw solid orange;
     position: relative;
 }
 
-.page:not(:first-child) h2:after {
-    content: "";
-    position: absolute;
-    left: 1.5vw;
-    right: -1.5vw;
-    bottom: -1.5vw;
-    border-bottom: 0.5vw solid orange;
-}
+    h2:after {
+        content: "";
+        position: absolute;
+        left: 1.5vw;
+        right: -1.5vw;
+        bottom: -1.5vw;
+        border-bottom: 0.5vw solid orange;
+    }
 
-.page:not(:first-child) h2 {
+h2 {
     display: inline-block;
     padding: 0 0.5vw 0 1vw;
     border-bottom: 0.5vw solid orange;
     position: relative;
 }
 
-.page:not(:first-child) h3:after {
+h3:after {
     content: "┳";
     color: #D36600;
 }
 
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.summary {
 }
 
-ul li {
-    margin: 0.4em 0;
-    padding: 0;
-}
+    .summary .members ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-ul li:before {
-    content: "┨";
-    margin-right: 0.5em;
-}
+        .summary .members ul li {
+            margin: 0.4em 0;
+            padding: 0;
+        }
 
-.attention {
-    border: double 6px hsl(29, 100%, 50%);
-    border-radius: 1vw;
-    margin-top: 10vw;
- }
+            .summary .members ul li:before {
+                content: "┨";
+                margin-right: 0.5em;
+                font-weight: bold;
+            }
 
-.attention h3 {
-    text-align: center;
-    margin: 0.3em 0 0;
-    font-size: 5vw;
-}
+    .summary .attention {
+        border: double 6px hsl(29, 100%, 50%);
+        border-radius: 1vw;
+        margin-top: 10vw;
+    }
 
-.page:not(:first-child) .attention h3:before {
-    font-size: 4vw;
-    color: #ff4500;
-    content: "┓　";
-}
+        .summary .attention h3 {
+            text-align: center;
+            margin: 0.3em 0 0;
+            font-size: 5vw;
+        }
 
-.page:not(:first-child) .attention h3:after {
-    font-size: 4vw;
-    color: #ff4500;
-    content: "┳┛";
-}
+            .summary .attention h3:before {
+                font-size: 4vw;
+                color: #ff4500;
+                content: "┓　";
+            }
 
-.attention ul {
-    font-size: 3vw;
-    margin: 1em;
-}
+            .summary .attention h3:after {
+                font-size: 4vw;
+                color: #ff4500;
+                content: "┳┛";
+            }
 
-.attention ul li:before {
-    content: "┌";
-}
+        .summary .attention ul {
+            font-size: 3vw;
+            margin: 1em;
+            padding: 0;
+            list-style: none;
+        }
 
-.page.schedule h2,
-.page.schedule h2:after {
+        .summary .attention li {
+            margin: 0;
+            padding: 0;
+        }
+
+            .summary .attention li:before {
+                content: "┌";
+                margin-right: 0.5em;
+            }
+
+.schedule h2,
+.schedule h2:after {
     border-bottom-color: #cb1ed1;
 }
 
 .schedule dl {
-    margin-top: -2vh;
-    margin-left: 3vw;
+    margin: 0 0 0 3vw;
     font-size: 4vw;
 }
 
@@ -284,7 +342,7 @@ ul li:before {
 }
 
 .schedule dt:first-of-type:before {
-    display: none;    
+    display: none;
 }
 
 .schedule dd:nth-of-type(1):after {
@@ -312,20 +370,21 @@ ul li:before {
 .schedule dt:nth-of-type(3) {
     margin-top: 8vh;
 }
-.schedule dt:nth-of-type(3):before {
-    height: 8vh;
-}
 
-.schedule dt:nth-of-type(3):after {
-    font-family: 'KFhimajiILLUST';
-    content: "酒";
-    font-size: 8vw;
-    position: absolute;
-    top: -1.5vh;
-    left: 50vw;
-    color: #4159e2;
-    transform: rotate(12deg);
-}
+    .schedule dt:nth-of-type(3):before {
+        height: 8vh;
+    }
+
+    .schedule dt:nth-of-type(3):after {
+        font-family: 'KFhimajiILLUST';
+        content: "酒";
+        font-size: 8vw;
+        position: absolute;
+        top: -1.5vh;
+        left: 50vw;
+        color: #4159e2;
+        transform: rotate(12deg);
+    }
 
 .schedule dd:nth-of-type(4):after {
     font-family: 'KFhimajiILLUST';
@@ -341,9 +400,11 @@ ul li:before {
 .schedule dt:nth-of-type(5) {
     margin-top: 6vh;
 }
-.schedule dt:nth-of-type(5):before {
-    height: 6vh;
-}
+
+    .schedule dt:nth-of-type(5):before {
+        height: 6vh;
+    }
+
 .schedule dd:nth-of-type(5):before {
     font-family: 'KFhimajiILLUST';
     content: "滑";
@@ -369,9 +430,10 @@ ul li:before {
 .schedule dt:nth-of-type(6) {
     margin-top: 12vh;
 }
-.schedule dt:nth-of-type(6):before {
-    height: 12vh;
-}
+
+    .schedule dt:nth-of-type(6):before {
+        height: 12vh;
+    }
 
 .schedule dd:nth-of-type(6):before {
     font-family: 'KFhimajiILLUST';
@@ -387,15 +449,16 @@ ul li:before {
 .schedule dt:nth-of-type(8) {
     margin-top: 6vh;
 }
-.schedule dt:nth-of-type(8):before {
-    height: 6vh;
-}
+
+    .schedule dt:nth-of-type(8):before {
+        height: 6vh;
+    }
 
 .schedule dd:nth-of-type(7):after {
     font-family: 'KFhimajiILLUST';
     content: "車";
     position: absolute;
-    top: 3.5vh;  
+    top: 3.5vh;
     left: -2.9em;
     transform: rotate(-90deg);
     color: #42106e;
@@ -436,3 +499,51 @@ ul li:before {
     margin-top: -1em;
     margin-left: 4em;
 }
+
+.things ul {
+    margin: 2vh 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 2.5vh;
+}
+
+.things li {
+    margin: 1vh 0;
+    padding: 0 0 0 3vh;
+    position: relative;
+}
+
+.things input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+    .things input[type="checkbox"] + label:before {
+        content: "";
+        height: 1.5vh;
+        width: 1.5vh;
+        border: solid 0.2vh #AFAFAF;
+        display: inline-block;
+        border-radius: 0.5vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    .things input[type="checkbox"]:checked + label:after {
+        content: "";
+        display: block;
+        height: 0.8vh;
+        width: 1.7vh;
+        border-style: none none solid solid;
+        border-width: 0.5vh;
+        border-color: #399a149e;
+        position: absolute;
+        left: 0;
+        top: -1vh;
+        bottom: 0;
+        margin: auto 0;
+        transform: rotate(-45deg);
+    }
