@@ -28,6 +28,11 @@
     src: url('../fonts/azuki.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'KFhimajiILLUST';
+    src: url('../fonts/KFhimajiILLUST.otf') format('opentype');
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -238,4 +243,195 @@ ul li:before {
 
 .attention ul li:before {
     content: "┌";
+}
+
+.page.schedule h2,
+.page.schedule h2:after {
+    border-bottom-color: #cb1ed1;
+}
+
+.schedule dl {
+    margin-left: 3vw;
+    font-size: 4vw;
+}
+
+.schedule dt {
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #42106e;
+    position: relative;
+    display: block;
+    width: 7ex;
+    text-align: center;
+}
+
+.schedule dd {
+    position: relative;
+    color: #42106e;
+}
+
+.schedule dt:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1vw;
+    height: 3vh;
+    background: #42106e;
+    border-radius: 1vw;
+    left: 3ex;
+    bottom: 1em;
+}
+
+.schedule dt:first-of-type:before {
+    display: none;    
+}
+
+.schedule dd:nth-of-type(1):after {
+    font-family: 'KFhimajiILLUST';
+    content: "駅";
+    font-size: 30vw;
+    position: absolute;
+    top: -6vh;
+    left: 30vw;
+    color: #db87424b;
+    transform: rotate(12deg);
+}
+
+.schedule dd:nth-of-type(2):after {
+    font-family: 'KFhimajiILLUST';
+    content: "で";
+    position: absolute;
+    top: 4vh;
+    left: -2.9em;
+    transform: rotate(-90deg);
+    color: #42106e;
+    font-size: 6vw;
+}
+
+.schedule dt:nth-of-type(3) {
+    margin-top: 8vh;
+}
+.schedule dt:nth-of-type(3):before {
+    height: 8vh;
+}
+
+.schedule dt:nth-of-type(3):after {
+    font-family: 'KFhimajiILLUST';
+    content: "酒";
+    font-size: 8vw;
+    position: absolute;
+    top: -1.5vh;
+    left: 50vw;
+    color: #4159e2;
+    transform: rotate(12deg);
+}
+
+.schedule dd:nth-of-type(4):after {
+    font-family: 'KFhimajiILLUST';
+    content: "車";
+    position: absolute;
+    top: 3.5vh;
+    left: -2.9em;
+    transform: rotate(-90deg);
+    color: #42106e;
+    font-size: 6vw;
+}
+
+.schedule dt:nth-of-type(5) {
+    margin-top: 6vh;
+}
+.schedule dt:nth-of-type(5):before {
+    height: 6vh;
+}
+.schedule dd:nth-of-type(5):before {
+    font-family: 'KFhimajiILLUST';
+    content: "滑";
+    font-size: 10vw;
+    position: absolute;
+    top: 5vh;
+    left: 4vw;
+    color: #1cacc5;
+    transform: rotate(-8deg);
+}
+
+.schedule dd:nth-of-type(5):after {
+    position: absolute;
+    left: 2vw;
+    top: 8vh;
+    content: "┷ スキー＆スノボ！ ┿";
+    font-weight: bold;
+    font-size: 6vw;
+    transform: rotate(-15deg);
+    color: #cb1ed1;
+}
+
+.schedule dt:nth-of-type(6) {
+    margin-top: 16vh;
+}
+.schedule dt:nth-of-type(6):before {
+    height: 16vh;
+}
+
+.schedule dd:nth-of-type(6):before {
+    font-family: 'KFhimajiILLUST';
+    content: "ゆ";
+    font-size: 12vw;
+    position: absolute;
+    top: -9vh;
+    left: 50vw;
+    color: #1c79c5;
+    transform: rotate(14deg);
+}
+
+.schedule dt:nth-of-type(8) {
+    margin-top: 6vh;
+}
+.schedule dt:nth-of-type(8):before {
+    height: 6vh;
+}
+
+.schedule dd:nth-of-type(7):after {
+    font-family: 'KFhimajiILLUST';
+    content: "車";
+    position: absolute;
+    top: 3.5vh;  
+    left: -2.9em;
+    transform: rotate(-90deg);
+    color: #42106e;
+    font-size: 6vw;
+}
+
+.schedule dd:nth-of-type(9):after {
+    font-family: 'KFhimajiILLUST';
+    content: "湯";
+    color: #BE0000;
+    position: absolute;
+    font-size: 6vw;
+    top: -1vw;
+    left: 14vw;
+}
+
+.schedule dd:nth-of-type(10):after {
+    font-family: 'KFhimajiILLUST';
+    content: "食";
+    color: #b96516;
+    position: absolute;
+    font-size: 6vw;
+    top: -1vw;
+    left: 10vw;
+}
+
+.schedule dd:nth-of-type(11):after {
+    font-family: 'KFhimajiILLUST';
+    content: "寝";
+    color: #4c2fec;
+    position: absolute;
+    font-size: 6vw;
+    top: -1vw;
+    left: 10vw;
+}
+
+.schedule dd {
+    margin-top: -1em;
+    margin-left: 4em;
 }
