@@ -257,7 +257,7 @@ ul li:before {
 }
 
 .schedule dt {
-    margin-top: 3vh;
+    margin-top: 2vh;
     font-weight: bold;
     color: #42106e;
     position: relative;
@@ -276,7 +276,7 @@ ul li:before {
     position: absolute;
     display: block;
     width: 1vw;
-    height: 3vh;
+    height: 2vh;
     background: #42106e;
     border-radius: 1vw;
     left: 3ex;
