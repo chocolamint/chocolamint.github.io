@@ -5,6 +5,21 @@
         section: ".page",
     });
 
+    $('#your-name').on('focus', function (e) {
+        $(this).blur();
+        setTimeout(() => {
+            const inputName = prompt('おなまえは？', $(this).val());
+            if (inputName) {
+                localStorage.setItem('user-name', inputName);
+                $(this).val(inputName);
+            }
+        });
+    });
+    const savedName = localStorage.getItem('user-name');
+    if (savedName) {
+        $('#your-name').val(savedName);
+    }
+
     $('input[type="checkbox"]').on('change', function () {
         localStorage.setItem($(this).attr('id'), $(this).prop('checked'));
     });
