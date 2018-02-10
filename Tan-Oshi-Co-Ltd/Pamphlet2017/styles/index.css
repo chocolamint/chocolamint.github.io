@@ -582,6 +582,124 @@ h3:after {
         transform: rotate(-45deg);
     }
 
+.expenses table {
+    border-spacing: 0;    
+}
+
+.expenses table tbody th {
+    text-align: left;
+    width: 40vw;
+}
+
+.expenses table tbody td {
+    text-align: right;
+}
+
+.expenses table thead th {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8vh 2vw;
+}
+
+.expenses table tbody th,
+.expenses table tbody td {
+    font-weight: normal;
+    border-top: solid 0.3vw #FF9D41;
+    padding: 0.8vh 2vw;
+}
+
+.seats dl {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: 4vh 0 0 8vw;
+    padding: 0;
+}
+
+.seats dt {
+    display: none;
+}
+
+.seats dd {
+    width: 30vw;
+    margin: 0;
+    padding: 1vh 1vw;
+    font-size: 4vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.seats dd:nth-of-type(1) {
+    font-size: 0;
+}
+
+.seats dd:nth-of-type(1):before {
+    content: "ババ心";
+    font-size: 4vw;
+}
+
+.seats dd:nth-of-type(1):after {
+    content: "D";
+    position: absolute;
+    top: -0.3vw;
+    left: -6vw;
+    width: 6vw;
+    font-size: 4vw;
+    border-top: solid 0.3vw black;
+    border-bottom: solid 0.3vw black;
+    box-sizing: border-box;
+    padding: 1vh 1vw;
+}
+
+.seats dd:nth-of-type(2):after {
+    content: "10";
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    width: 30vw;
+    text-align: center;
+    border-left: solid 0.3vw black;
+    border-right: solid 0.3vw black;
+    border-bottom: solid 0.3vw black;
+    box-sizing: border-box;
+}
+
+.seats dd:nth-of-type(4):after {
+    content: "11";
+    position: absolute;
+    top: -2vh;
+    left: 30vw;
+    width: 30vw;
+    text-align: center;
+    border-right: solid 0.3vw black;
+    border-bottom: solid 0.3vw black;
+    box-sizing: border-box;
+}
+
+.seats dd:nth-of-type(3):after {
+    content: "E";
+    position: absolute;
+    width: 6vw;
+    bottom: 0;
+    left: -6vw;
+    font-size: 4vw;
+    box-sizing: border-box;
+    border-bottom: solid 0.3vw black;
+    padding: 1vh 1vw;
+}
+
+.seats dd:nth-of-type(1),
+.seats dd:nth-of-type(3) {
+    border-left: solid 0.3vw black;
+}
+
+.seats dd {
+    border-right: solid 0.3vw black;
+    border-bottom: solid 0.3vw black;
+}
+
+
 .memo {
     position: absolute;
     border-left: 4vw red solid;
