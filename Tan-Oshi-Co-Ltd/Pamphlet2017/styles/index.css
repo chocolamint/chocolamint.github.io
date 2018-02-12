@@ -668,6 +668,7 @@ h3:after {
     padding: 1vh 4vw;
     box-sizing: border-box;
     width: 80vw;
+    z-index: auto;
 }
 
 .expenses:before,
@@ -682,6 +683,7 @@ h3:after {
     right: 0;
     bottom: 0;
     transform: skew(0.2deg, 0.1deg);
+    z-index: -1;
 }
 
 .expenses:after,
@@ -696,6 +698,7 @@ h3:after {
     right: -0.4vw;
     bottom: -0.4vw;
     transform: skew(-0.2deg, -0.1deg);
+    z-index: -1;
 }
 
 .expenses h3,
@@ -905,7 +908,7 @@ h3:after {
 
 .links li {
     font-size: 4vw;
-    margin: 0.4vh 0.5em;
+    margin: 0 0.5em;
 }
 
 .links li a:before {
@@ -916,6 +919,8 @@ h3:after {
 .links li a {
     text-decoration: none;
     color: #146ef5bd;
+    padding: 0.6vh 0;
+    display: inline-block;
 }
 
 .memo {
