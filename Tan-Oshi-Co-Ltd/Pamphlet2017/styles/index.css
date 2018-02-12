@@ -388,7 +388,7 @@ h3:after {
 
 .schedule dd:nth-of-type(1):after {
     content: attr(title);
-    font-size: 1vh;
+    font-size: 1.2vh;
     display: block;
     position: absolute;
     width: 12em;
@@ -508,7 +508,7 @@ h3:after {
     
 .schedule dd:nth-of-type(7):before {
     content: attr(title);
-    font-size: 1vh;
+    font-size: 1.2vh;
     display: block;
     position: absolute;
     width: 12em;
