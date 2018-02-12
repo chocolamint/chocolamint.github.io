@@ -324,13 +324,24 @@ h3:after {
     border-bottom-color: #d11e8db8;
 }
 
+.schedule h2:before {
+    font-family: 'KFhimajiILLUST';
+    content: "駅";
+    font-size: 24vw;
+    position: absolute;
+    top: 0;
+    left: 60vw;
+    color: #db87424b;
+    transform: rotate(12deg);
+}
+
 .schedule dl {
     margin: 0 0 0 3vw;
     font-size: 4vw;
 }
 
 .schedule dt {
-    margin-top: 2vh;
+    margin-top: 1.5vh;
     font-weight: bold;
     color: #42106e;
     position: relative;
@@ -349,7 +360,7 @@ h3:after {
     position: absolute;
     display: block;
     width: 1vw;
-    height: 2vh;
+    height: 1.5vh;
     background: #42106e;
     border-radius: 1vw;
     left: 3ex;
@@ -360,16 +371,39 @@ h3:after {
     display: none;
 }
 
-.schedule dd:nth-of-type(1):after {
-    font-family: 'KFhimajiILLUST';
-    content: "駅";
-    font-size: 30vw;
-    position: absolute;
-    top: -6vh;
-    left: 30vw;
-    color: #db87424b;
-    transform: rotate(12deg);
+.schedule dd:nth-of-type(1) {
+    position: relative;
 }
+
+.schedule dd:nth-of-type(1):before {
+    content: "";
+    width: 6em;
+    height: 1.2vh;
+    background: #ffbb0070;
+    z-index: -1;
+    position: absolute;
+    bottom: -0.6vh;
+    left: 3.5em;
+}
+
+.schedule dd:nth-of-type(1):after {
+    content: attr(title);
+    font-size: 1vh;
+    display: block;
+    position: absolute;
+    width: 17vh;
+    background: #ffffffb8;
+    border-left: #1641b988 2vh solid;
+    box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
+    padding: 0.5vh 1vh;
+    left: 30vw;
+    top: 4vh;
+    z-index: 2;
+    line-height: 1.2;
+    color: #000000e8;
+    transform: rotate(1.8deg);
+}
+
 
 .schedule dd:nth-of-type(2):after {
     font-family: 'KFhimajiILLUST';
@@ -441,6 +475,7 @@ h3:after {
     font-size: 5vw;
     transform: rotate(-12deg);
     color: #cb1ed1;
+
 }
 
 .schedule dt:nth-of-type(6) {
@@ -469,6 +504,25 @@ h3:after {
     .schedule dt:nth-of-type(8):before {
         height: 6vh;
     }
+
+    
+.schedule dd:nth-of-type(7):before {
+    content: attr(title);
+    font-size: 1vh;
+    display: block;
+    position: absolute;
+    width: 17vh;
+    background: #ffffffb8;
+    border-left: #b9167088 2vh solid;
+    box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
+    padding: 0.5vh 1vh;
+    left: -2vw;
+    top: 3vh;
+    z-index: 2;
+    line-height: 1.2;
+    color: #000000e8;
+    transform: rotate(1.2deg);
+}
 
 .schedule dd:nth-of-type(7):after {
     font-family: 'KFhimajiILLUST';
