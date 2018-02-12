@@ -383,12 +383,12 @@ h3:after {
 
 .schedule h2:before {
     font-family: 'KFhimajiILLUST';
-    content: "駅";
+    content: "時";
     font-size: 24vw;
     position: absolute;
     top: 0;
     left: 60vw;
-    color: #db87424b;
+    color: #d11e8c1e;
     transform: rotate(12deg);
 }
 
@@ -703,6 +703,63 @@ h3:after {
         bottom: 0;
         margin: auto 0;
         transform: rotate(-45deg);
+    }
+
+    .things .wintersports-things li:nth-of-type(5):before {
+        content: "";
+        border-bottom: 0.3vw dashed #b9163f88;
+        position: absolute;
+        width: 14em;
+        top: 6vh;
+    }
+
+    .things .wintersports-things li:nth-of-type(6):before {
+        content: "↑ ここまで必須！";
+        font-size: 1.2vh;
+        display: block;
+        position: absolute;
+        width: 12em;
+        background: #ffffffb8;
+        border-left: #b9163f88 2vh solid;
+        box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
+        padding: 0.5vh 1vh;
+        left: 48vw;
+        top: 0;
+        z-index: 2;
+        line-height: 1.2;
+        color: #880029e8;
+        transform: rotate(-1.8deg);
+        height: 2.4em;
+    }
+
+    .purchasable label:after {
+        content: "現地調達可";
+        display: inline-block;
+        font-size: 1vh;
+        background: #00748841;
+        color: white;
+        padding: 0.3vh 0.8vw;
+        margin-left: 0.7em;
+        border-radius: 0.4vh;
+    }
+
+    .things .wintersports-things li:last-of-type:before {
+        content: "この辺はあると便利";
+        font-size: 1.2vh;
+        display: block;
+        position: absolute;
+        width: 12em;
+        background: #ffffffb8;
+        border-left: #1619b988 2vh solid;
+        box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
+        padding: 0.5vh 1vh;
+        left: 48vw;
+        top: 0;
+        z-index: 2;
+        line-height: 1.2;
+        color: #000000e8;
+        transform: rotate(2.1deg);
+        height: 2.4em;
     }
 
 .etc h2 {
