@@ -118,8 +118,7 @@ h1 {
     bottom: 3vh;
     left: 14vw;
     right: 5vw;
-    border-bottom: double 1px #909090;
-    box-shadow: 0 2px 0 white, 0 3px 0 #909090;
+    border-bottom: double 0.3vw #909090;
 }
     /*.your-name::before {
         content: "";
@@ -131,6 +130,15 @@ h1 {
         position: absolute;
         top: -5vw;
     }*/
+
+    .your-name:after {
+        content: "";
+        position: absolute;
+        top: -3vh;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
     .your-name label {
         font-family: RiiMonakaBLt;

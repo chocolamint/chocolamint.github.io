@@ -5,7 +5,7 @@
         section: ".page",
     });
 
-    $('#your-name').on('focus', function (e) {
+    $('.your-name').on('click', function (e) {
         e.preventDefault();
         $(this).blur();
         setTimeout(() => {
@@ -51,7 +51,10 @@
 
             const holdTime = new Date().getTime() - startTimestamp;
             if (holdTime < 500) return;
-
+            
+            // TODO: 使い物になるまで封印
+            return;
+            
             let memo;
             while (true) {
                 memo = prompt('付箋を貼る', memo);
