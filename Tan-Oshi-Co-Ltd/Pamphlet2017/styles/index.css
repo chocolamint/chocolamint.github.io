@@ -732,7 +732,7 @@ h3:after {
         height: 2.4em;
     }
 
-    .purchasable label:after {
+    /* .purchasable label:after {
         content: "現地調達可";
         display: inline-block;
         font-size: 1vh;
@@ -741,7 +741,7 @@ h3:after {
         padding: 0.3vh 0.8vw;
         margin-left: 0.7em;
         border-radius: 0.4vh;
-    }
+    } */
 
     .things .wintersports-things li:last-of-type:before {
         content: "この辺はあると便利";
