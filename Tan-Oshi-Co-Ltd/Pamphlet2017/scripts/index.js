@@ -20,9 +20,11 @@
         }
     });
 
-    $.scrollify({
-        section: ".page",
-    });
+    setTimeout(function(){
+        $.scrollify({
+            section: ".page",
+        });
+    }, 1000);
 
     $('.your-name').on('click', function (e) {
         e.preventDefault();
