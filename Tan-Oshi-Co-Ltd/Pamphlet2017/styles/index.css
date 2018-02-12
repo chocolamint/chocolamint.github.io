@@ -18,6 +18,54 @@
     src: url('../fonts/KFhimajiILLUST.otf') format('opentype');
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 5vw;
+    z-index: 10;
+    background: white;
+}
+
+.loading:before,
+.loading:after {
+    content: "";
+    background: transparent;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 6vw;
+    position: absolute;
+    display: block;
+    z-index: 11;
+    margin: auto;
+    top: -6vw;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: -50% -50%;
+    box-shadow: -12vw 6vw 0 #8080804e, -6vw 6vw 0 #8080804e, 0 6vw 0 #8080804e, 6vw 6vw 0 #8080804e, 12vw 6vw 0 #8080804e;
+    animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        box-shadow: -12vw 6vw 0 #808080ce, -6vw 6vw 0 #8080804e, 0 6vw 0 #8080804e, 6vw 6vw 0 #8080804e, 12vw 6vw 0 #8080804e;
+    }
+	20% {
+        box-shadow: -12vw 6vw 0 #8080804e, -6vw 6vw 0 #808080ce, 0 6vw 0 #8080804e, 6vw 6vw 0 #8080804e, 12vw 6vw 0 #8080804e;
+    }
+	40% {
+        box-shadow: -12vw 6vw 0 #8080804e, -6vw 6vw 0 #8080804e, 0 6vw 0 #808080ce, 6vw 6vw 0 #8080804e, 12vw 6vw 0 #8080804e;
+    }
+	60% {
+        box-shadow: -12vw 6vw 0 #8080804e, -6vw 6vw 0 #8080804e, 0 6vw 0 #8080804e, 6vw 6vw 0 #808080ce, 12vw 6vw 0 #8080804e;
+    }
+	80% {
+        box-shadow: -12vw 6vw 0 #8080804e, -6vw 6vw 0 #8080804e, 0 6vw 0 #8080804e, 6vw 6vw 0 #8080804e, 12vw 6vw 0 #808080ce;
+    }
+}
+
 html, body {
     margin: 0;
     padding: 0;

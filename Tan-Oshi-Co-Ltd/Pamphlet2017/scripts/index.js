@@ -1,6 +1,25 @@
 ﻿jQuery(function ($) {
     'use strict';
 
+    let $loading = $('<div>', {'class': 'loading'}).appendTo('body');
+
+    WebFont.load({
+        custom: {
+            families: ['azuki']
+        },
+        loading: function () {
+            console.log('全てのWebフォントのロードが開始されたとき');
+        },
+        active: function () {
+            $loading.remove();
+            $loading = null;
+            console.log('全てのWebフォントのロードが成功したとき');
+        },
+        inactive: function () {
+            console.log('全てのWebフォントのロードが失敗したとき');
+        }
+    });
+
     $.scrollify({
         section: ".page",
     });
@@ -51,10 +70,10 @@
 
             const holdTime = new Date().getTime() - startTimestamp;
             if (holdTime < 500) return;
-            
+
             // TODO: 使い物になるまで封印
             return;
-            
+
             let memo;
             while (true) {
                 memo = prompt('付箋を貼る', memo);
