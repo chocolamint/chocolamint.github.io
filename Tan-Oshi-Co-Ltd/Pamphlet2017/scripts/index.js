@@ -5,7 +5,7 @@
 
     WebFont.load({
         custom: {
-            families: ['azuki']
+            families: ['azuki','KFhimajiILLUST','mini-convenie','RiiMonakaBLt']
         },
         loading: function () {
             console.log('全てのWebフォントのロードが開始されたとき');
