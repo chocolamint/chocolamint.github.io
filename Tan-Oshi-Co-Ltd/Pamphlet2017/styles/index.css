@@ -584,6 +584,7 @@ h3:after {
 
 .expenses table {
     border-spacing: 0;    
+    font-size: 4vw;
 }
 
 .expenses table tbody th {
@@ -593,6 +594,7 @@ h3:after {
 
 .expenses table tbody td {
     text-align: right;
+    width: 18vw;
 }
 
 .expenses table thead th {
@@ -608,12 +610,36 @@ h3:after {
     padding: 0.8vh 2vw;
 }
 
+.expenses table tfoot th,
+.expenses table tfoot td {
+    border-top: solid 0.3vw #FF9D41;
+    padding: 0.8vh 2vw;
+}
+
+.expenses table tfoot th {
+    font-weight: bold;
+    text-align: left;
+}
+.expenses table tfoot td {
+    text-align: right;
+}
+
+.seats p {
+    font-size: 3.5vw;
+    margin: 2vw 0;
+}
+
+.seats p:after {
+    font-family: 'KFhimajiILLUST';
+    content: "で";
+}
+
 .seats dl {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 60vw;
-    margin: 4vh 0 0 8vw;
+    margin: 6vh 0 0 8vw;
     padding: 0;
 }
 
@@ -646,8 +672,6 @@ h3:after {
     left: -6vw;
     width: 6vw;
     font-size: 4vw;
-    border-top: solid 0.3vw black;
-    border-bottom: solid 0.3vw black;
     box-sizing: border-box;
     padding: 1vh 1vw;
 }
@@ -655,25 +679,20 @@ h3:after {
 .seats dd:nth-of-type(2):after {
     content: "10";
     position: absolute;
-    top: -2vh;
+    top: -3vh;
     left: 0;
     width: 30vw;
     text-align: center;
-    border-left: solid 0.3vw black;
-    border-right: solid 0.3vw black;
-    border-bottom: solid 0.3vw black;
     box-sizing: border-box;
 }
 
 .seats dd:nth-of-type(4):after {
     content: "11";
     position: absolute;
-    top: -2vh;
+    top: -3vh;
     left: 30vw;
     width: 30vw;
     text-align: center;
-    border-right: solid 0.3vw black;
-    border-bottom: solid 0.3vw black;
     box-sizing: border-box;
 }
 
@@ -685,20 +704,58 @@ h3:after {
     left: -6vw;
     font-size: 4vw;
     box-sizing: border-box;
-    border-bottom: solid 0.3vw black;
     padding: 1vh 1vw;
 }
 
-.seats dd:nth-of-type(1),
-.seats dd:nth-of-type(3) {
-    border-left: solid 0.3vw black;
+.seats dd:nth-of-type(2):before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: solid 0.1vw black;
+    border-bottom: solid 0.1vw black;
+    top: 0;
+    left: -8vw;
+    width: 68.5vw;
+    height: 8.2vh;
+    transform: rotate(-0.3deg);
 }
 
-.seats dd {
-    border-right: solid 0.3vw black;
-    border-bottom: solid 0.3vw black;
+.seats dd:nth-of-type(3):before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: solid 0.1vw black;
+    top: 4vh;
+    left: -8.2vw;
+    width: 68.6vw;
+    height: 4vh;
+    transform: rotate(0.5deg);
 }
 
+.seats dd:nth-of-type(4):before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: solid 0.1vw black;
+    border-right: solid 0.1vw black;
+    top: -3vh;
+    left: 1vw;
+    width: 58.7vw;
+    height: 12vh;
+    transform: rotate(0.5deg);
+}
+
+.seats dl:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: solid 0.1vw black;
+    top: -3vh;
+    left: 30vw;
+    width: 54.7vw;
+    height: 12vh;
+    transform: rotate(-0.2deg);
+}
 
 .memo {
     position: absolute;
