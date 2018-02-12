@@ -23,7 +23,6 @@ html, body {
     padding: 0;
     height: 100vh;
     font-family: azuki;
-    overflow-x: hidden;
 }
 
 header {
