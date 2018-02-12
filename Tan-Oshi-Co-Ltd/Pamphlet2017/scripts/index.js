@@ -1,11 +1,11 @@
 ﻿jQuery(function ($) {
     'use strict';
 
-    let $loading = $('<div>', {'class': 'loading'}).appendTo('body');
+    let $loading = $('<div>', { 'class': 'loading' }).appendTo('body');
 
     WebFont.load({
         custom: {
-            families: ['azuki','KFhimajiILLUST','mini-convenie','RiiMonakaBLt']
+            families: ['azuki', 'KFhimajiILLUST', 'mini-convenie', 'RiiMonakaBLt']
         },
         loading: function () {
             console.log('全てのWebフォントのロードが開始されたとき');
@@ -20,7 +20,7 @@
         }
     });
 
-    setTimeout(function(){
+    setTimeout(function () {
         $.scrollify({
             section: ".page",
         });
@@ -58,9 +58,55 @@
 
     $('body').on('touchend', function (e) {
         const $target = $(e.target);
-        if ($target.is('input, label')) return;
+        //if ($target.is('input, label')) return;
+        let memo;
         if ($target.is('.memo')) {
-            if (confirm('はずす？')) {
+            // if (confirm('はずす？')) {
+            //     localStorage.removeItem('memo' + $target.prop('memo-id'));
+            //     $target.remove();
+
+            //     if (!$('.memo').length) {
+            //         localStorage.setItem('memo-count', 0);
+            //     }
+            // }
+            memo = $target.text();
+        }
+
+        const holdTime = new Date().getTime() - startTimestamp;
+        if (holdTime < 500) return;
+
+        // TODO: 使い物になるまで封印
+        //return;
+
+        while (true) {
+            memo = prompt('付箋', memo);
+            if (memo) {
+                if (memo.length > 24) {
+                    alert('メモが長すぎます！');
+                    continue;
+                }
+                const memoCount = Number(localStorage.getItem('memo-count'));
+                localStorage.setItem('memo-count', memoCount + 1);
+                const memoObj = {
+                    memo: memo,
+                    pageX: e.changedTouches[0].pageX - 20,
+                    pageY: e.changedTouches[0].pageY - 15,
+                    hue: Math.random() * 360,
+                    deg: Math.random() * 4 - 2
+                };
+                localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
+                $('<div>')
+                    .addClass('memo')
+                    .prop('memo-id', memoCount)
+                    .css({
+                        'left': memoObj.pageX,
+                        'top': memoObj.pageY,
+                        'border-color': `hsla(${memoObj.hue}, 79%, 41%, 0.533)`,
+                        'transform': `rotate(${memoObj.deg}deg)`
+                    })
+                    .text(memo)
+                    .appendTo('body');
+            } else {
                 localStorage.removeItem('memo' + $target.prop('memo-id'));
                 $target.remove();
 
@@ -68,39 +114,7 @@
                     localStorage.setItem('memo-count', 0);
                 }
             }
-        } else {
-
-            const holdTime = new Date().getTime() - startTimestamp;
-            if (holdTime < 500) return;
-
-            // TODO: 使い物になるまで封印
-            return;
-
-            let memo;
-            while (true) {
-                memo = prompt('付箋を貼る', memo);
-                if (memo) {
-                    if (memo.length > 14) {
-                        alert('メモが長すぎます！');
-                        continue;
-                    }
-                    const memoCount = Number(localStorage.getItem('memo-count'));
-                    localStorage.setItem('memo-count', memoCount + 1);
-                    const memoObj = {
-                        memo: memo,
-                        pageX: e.changedTouches[0].pageX - 20,
-                        pageY: e.changedTouches[0].pageY - 15
-                    };
-                    localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
-                    $('<div>')
-                        .addClass('memo')
-                        .prop('memo-id', memoCount)
-                        .css({ 'left': memoObj.pageX, 'top': memoObj.pageY })
-                        .text(memo)
-                        .appendTo('body');
-                }
-                break;
-            }
+            break;
         }
     });
 
@@ -112,7 +126,12 @@
                 $('<div>')
                     .addClass('memo')
                     .prop('memo-id', i)
-                    .css({ 'left': memoObj.pageX, 'top': memoObj.pageY })
+                    .css({
+                        'left': memoObj.pageX,
+                        'top': memoObj.pageY,
+                        'border-color': `hsla(${memoObj.hue}, 79%, 41%, 0.533)`,
+                        'transform': `rotate(${memoObj.deg}deg)`
+                    })
                     .text(memoObj.memo)
                     .appendTo('body');
             }
