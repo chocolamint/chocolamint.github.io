@@ -391,7 +391,7 @@ h3:after {
     font-size: 1vh;
     display: block;
     position: absolute;
-    width: 17vh;
+    width: 12em;
     background: #ffffffb8;
     border-left: #1641b988 2vh solid;
     box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
@@ -511,7 +511,7 @@ h3:after {
     font-size: 1vh;
     display: block;
     position: absolute;
-    width: 17vh;
+    width: 12em;
     background: #ffffffb8;
     border-left: #b9167088 2vh solid;
     box-shadow: 1px 1px 1px 0 rgba(128, 128, 128, 0.39);
