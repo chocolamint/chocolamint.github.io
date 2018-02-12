@@ -9,10 +9,10 @@
         e.preventDefault();
         $(this).blur();
         setTimeout(() => {
-            const inputName = prompt('おなまえは？', $(this).val());
+            const inputName = prompt('おなまえは？', $('#your-name').val());
             if (inputName) {
                 localStorage.setItem('user-name', inputName);
-                $(this).val(inputName);
+                $('#your-name').val(inputName);
             }
         });
     });
