@@ -85,33 +85,45 @@
                     alert('メモが長すぎます！');
                     continue;
                 }
-                const memoCount = Number(localStorage.getItem('memo-count'));
-                localStorage.setItem('memo-count', memoCount + 1);
-                const memoObj = {
-                    memo: memo,
-                    pageX: e.changedTouches[0].pageX - 20,
-                    pageY: e.changedTouches[0].pageY - 15,
-                    hue: Math.random() * 360,
-                    deg: Math.random() * 4 - 2
-                };
-                localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
-                $('<div>')
-                    .addClass('memo')
-                    .prop('memo-id', memoCount)
-                    .css({
-                        'left': memoObj.pageX,
-                        'top': memoObj.pageY,
-                        'border-color': `hsla(${memoObj.hue}, 79%, 41%, 0.533)`,
-                        'transform': `rotate(${memoObj.deg}deg)`
-                    })
-                    .text(memo)
-                    .appendTo('body');
-            } else {
-                localStorage.removeItem('memo' + $target.prop('memo-id'));
-                $target.remove();
 
-                if (!$('.memo').length) {
-                    localStorage.setItem('memo-count', 0);
+                if ($target.is('.memo')) {
+                    let memoId = $target.prop('memo-id');
+                    let memoObj = JSON.parse(localStorage.getItem('memo' + memoId));
+                    memoObj.memo = memo;
+                    $target.text(memo);
+                    localStorage.setItem('memo' + memoId, JSON.stringify(memoObj));
+                } else {
+                    const memoCount = Number(localStorage.getItem('memo-count'));
+                    localStorage.setItem('memo-count', memoCount + 1);
+                    const memoObj = {
+                        memo: memo,
+                        pageX: e.changedTouches[0].pageX - 20,
+                        pageY: e.changedTouches[0].pageY - 15,
+                        hue: Math.random() * 360,
+                        deg: Math.random() * 4 - 2
+                    };
+                    localStorage.setItem('memo' + memoCount, JSON.stringify(memoObj));
+                    $('<div>')
+                        .addClass('memo')
+                        .prop('memo-id', memoCount)
+                        .css({
+                            'left': memoObj.pageX,
+                            'top': memoObj.pageY,
+                            'border-color': `hsla(${memoObj.hue}, 79%, 41%, 0.533)`,
+                            'transform': `rotate(${memoObj.deg}deg)`
+                        })
+                        .text(memo)
+                        .appendTo('body');
+                }
+            } else {
+
+                if (confirm('付箋をはずしますか？')) {
+                    localStorage.removeItem('memo' + $target.prop('memo-id'));
+                    $target.remove();
+
+                    if (!$('.memo').length) {
+                        localStorage.setItem('memo-count', 0);
+                    }
                 }
             }
             break;
